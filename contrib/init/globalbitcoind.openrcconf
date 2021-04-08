@@ -1,0 +1,33 @@
+# /etc/conf.d/globalbitcoind: config file for /etc/init.d/globalbitcoind
+
+# Config file location
+#GLOBALBITCOIND_CONFIGFILE="/etc/globalbitcoin/globalbitcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $GLOBALBITCOIND_USER)
+#GLOBALBITCOIND_PIDDIR="/var/run/globalbitcoind"
+
+# What filename to give the pidfile
+#GLOBALBITCOIND_PIDFILE="${GLOBALBITCOIND_PIDDIR}/globalbitcoind.pid"
+
+# Where to write globalbitcoind data (be mindful that the blockchain is large)
+#GLOBALBITCOIND_DATADIR="/var/lib/globalbitcoind"
+
+# User and group to own globalbitcoind process
+#GLOBALBITCOIND_USER="globalbitcoin"
+#GLOBALBITCOIND_GROUP="globalbitcoin"
+
+# Path to globalbitcoind executable
+#GLOBALBITCOIND_BIN="/usr/bin/globalbitcoind"
+
+# Nice value to run globalbitcoind under
+#GLOBALBITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#GLOBALBITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for globalbitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+GLOBALBITCOIND_SIGTERM_TIMEOUT=60
